@@ -1,6 +1,5 @@
 class Api::V1::TasksController < ApplicationController
   def index
-    # render json: Task.all
     tasks = Task.all
     render json: TaskSerializer.format_tasks(tasks)
   end
